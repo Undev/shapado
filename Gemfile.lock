@@ -110,6 +110,7 @@ GIT
 
 GEM
   remote: http://rubygems.org/
+  remote: http://gems.undev.cc/
   specs:
     POpen4 (0.1.4)
       Platform (>= 0.4.0)
@@ -478,6 +479,10 @@ GEM
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    undev (0.2.1)
+      capistrano
+      rake
+      thor
     unf (0.0.5)
       unf_ext
     unf_ext (0.0.4)
@@ -580,6 +585,7 @@ DEPENDENCIES
   twitter-text (= 1.1.8)
   twitter_oauth
   uglifier
+  undev (>= 0.2.1)
   unicorn (= 4.1.1)
   uuidtools (~> 2.1.1)
   whatlanguage (= 1.0.0)

@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+source 'http://gems.undev.cc'
 
 gem 'rails', '3.2.6'
 
@@ -92,6 +93,7 @@ gem 'jquery-rails'
 
 group :deploy do
   gem 'capistrano', '2.9.0', :require => false
+  gem 'undev', '>=0.2.1'
   gem 'ricodigo-capistrano-recipes', '~> 0.1.3', :require => false
   gem 'unicorn', '4.1.1', :require => false
   gem 'therubyracer', '0.12.0', :platforms => :ruby
