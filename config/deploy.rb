@@ -5,13 +5,16 @@ set :application, 'shapado'
 set :scm, :git
 # TODO поменять репозитарий и ветку
 set :repository, 'git@github.com:zabolotnov87/shapado.git'
-set :branch, 'origin/update_for_deploy'
+set :branch, 'update_for_deploy'
 
 # set :asset_packager, 'jammit'
 
 set :use_sudo, false
 set :undev_ruby_version, '1.9.3-p327'
 default_run_options[:pty] = true
+set :ssh_options, forward_agent: true
+
+set :rake, "#{rake} --trace"
 
 # TODO: вынести в config/deploy/production.rb
 set :user, 'poweruser'
@@ -21,6 +24,14 @@ set :keep_releases, 5
 role :web, '10.40.56.86'
 role :app, '10.40.56.86'
 role :db,  '10.40.56.86', :primary => true
+
+namespace :bundle do
+  task :install_binstubs do
+    run "cd #{release_path} && bundle install --deployment --binstubs --path #{shared_path}/bundle --without development test"
+  end
+end
+
+before "deploy:assets:precompile", "bundle:install_binstubs"
 
 #  namespace :deploy do
 #     task :restart, :roles => :app, :except => { :no_release => true } do
