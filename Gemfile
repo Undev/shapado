@@ -62,7 +62,7 @@ gem 'pdfkit' # apt-get install wkhtmltopdf
 gem 'geoip'
 gem 'rubyzip', '0.9.4', :require => 'zip/zip'
 
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 
 # authentication
 gem 'omniauth', '~> 0.3.0'
@@ -94,13 +94,13 @@ group :deploy do
   gem 'capistrano', '2.9.0', :require => false
   gem 'ricodigo-capistrano-recipes', '~> 0.1.3', :require => false
   gem 'unicorn', '4.1.1', :require => false
-  gem 'therubyracer'
+  gem 'therubyracer', '0.12.0', :platforms => :ruby
 end
 
 group :scripts do
   gem 'eventmachine', '~> 0.12.10'
   gem 'em-websocket', '~> 0.3.0'
-  gem 'twitter', '1.7.2'
+  gem 'twitter', git: 'git://github.com/sferik/twitter', tag: 'v1.7.2'
 end
 
 group :test do
