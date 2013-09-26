@@ -11,10 +11,6 @@ timeout (ENV['UNICORN_TIMEOUT'] || 120).to_i
 pid APP_PATH + "/shared/pids/unicorn.pid"
 
 preload_app true
+
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
-
-after_fork do |server, worker|
-  ActiveRecord::Base.establish_connection
-  Redis.current.quit
-end
