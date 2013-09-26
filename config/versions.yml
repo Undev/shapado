@@ -55,7 +55,7 @@ basic:
   custom_themes: true
   basic_support: true
   phone_support: false
-  uses_stripe: true
+  uses_stripe: false
   price: 900
 
 
@@ -68,7 +68,7 @@ plus:
   custom_themes: true
   basic_support: true
   phone_support: true
-  uses_stripe: true
+  uses_stripe: false
   price: 4900
 
 
@@ -81,7 +81,7 @@ premium:
   custom_themes: true
   basic_support: true
   phone_support: true
-  uses_stripe: true
+  uses_stripe: false
   price: 24900
 
 
@@ -94,7 +94,7 @@ maximium:
   custom_themes: true
   basic_support: true
   phone_support: true
-  uses_stripe: true
+  uses_stripe: false
   price: 74900
 
 
@@ -107,7 +107,7 @@ optimum:
   custom_themes: true
   basic_support: true
   phone_support: true
-  uses_stripe: true
+  uses_stripe: false
   price: 99900
 
 private:
@@ -119,6 +119,6 @@ private:
   custom_themes: true
   basic_support: true
   phone_support: true
-  uses_stripe: true
+  uses_stripe: false
   price: 0
   per_user: 200
