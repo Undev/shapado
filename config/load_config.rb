@@ -8,7 +8,7 @@ require 'ostruct'
 config_file = Rails.root+"config/shapado.yml"
 
 if !File.exist?(config_file)
-  raise StandardError,  "Config file was not found"
+  raise StandardError,  "#{config_file} Config file was not found"
 end
 
 options = YAML.load_file(config_file)
