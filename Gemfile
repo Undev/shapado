@@ -46,7 +46,6 @@ gem 'redis-rails'
 gem 'whatlanguage', '1.0.0'
 gem 'uuidtools', '~> 2.1.1'
 gem 'magent', '0.6.2'
-gem 'bug_hunter', :git => 'git://github.com/ricodigo/bug_hunter.git'
 
 gem 'goalie', '~> 0.0.4'
 gem 'dynamic_form'

@@ -45,18 +45,6 @@ GIT
       tzinfo (~> 0.3.22)
 
 GIT
-  remote: git://github.com/ricodigo/bug_hunter.git
-  revision: b5bfc8420dc8c2a8ca3ea5a2874a9dec2e6fb624
-  specs:
-    bug_hunter (0.2.0)
-      haml
-      launchy
-      mongoid
-      rack (>= 1.0.0)
-      sass
-      sinatra
-
-GIT
   remote: git://github.com/ricodigo/rdiscount.git
   revision: 5ad5689886043e312e505585a291c85f9e50a761
   specs:
@@ -518,7 +506,6 @@ DEPENDENCIES
   autotest
   bson (= 1.4.0)
   bson_ext (= 1.4.0)
-  bug_hunter!
   capistrano (= 2.9.0)
   capybara
   capybara-webkit
