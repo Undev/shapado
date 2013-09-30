@@ -83,6 +83,6 @@ namespace :deploy do
   end
 end
 
-after 'deploy:update', 'deploy:create_symlinks', 'bundle:install_binstubs', 'deploy:update_geoip', 'deploy:assets:precompile'
+after 'deploy:update', 'deploy:create_symlinks', 'bundle:install_binstubs', 'deploy:update_geoip', 'deploy:bootstrap', 'deploy:assets:precompile'
 after 'deploy:assets:precompile', 'deploy:assets:symlink'
 after 'deploy:restart', 'deploy:restart_unicorn'
