@@ -24,8 +24,11 @@ Shapado::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  # (need for local precompile)
+  config.assets.prefix = '/dev-assets'
+
   # Expands the lines which load the assets
-  config.assets.debug = false
+  config.assets.debug = true
 	config.assets.logger = false
   config.after_initialize do |app|
     app.assets.logger = Logger.new('/dev/null')

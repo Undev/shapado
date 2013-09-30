@@ -30,14 +30,11 @@ module Jobs
         end
 
         if theme.last_error.empty?
-          #TODO: пофиксить
-          #NOTE: компрессор не работает, предполагаемая причина - отсутствие java на машине.
-          #if Rails.env == "production"
-          #  css << YUI::CssCompressor.new.compress(compiled_css)
-          #else
-          #  css << compiled_css
-          #end
-          css << compiled_css
+          if Rails.env == "production"
+            css << YUI::CssCompressor.new.compress(compiled_css)
+          else
+            css << compiled_css
+          end
           break
         end
       end
