@@ -4,8 +4,8 @@ set :application, 'shapado'
 
 set :scm, :git
 
-# TODO поменять репозитарий и ветку
-set :repository, 'git@github.com:zabolotnov87/shapado.git'
+# TODO поменять ветку
+set :repository, 'git@github.com:Undev/shapado.git'
 set :branch, 'update_for_deploy'
 
 set :use_sudo, false
